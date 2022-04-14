@@ -1,0 +1,25 @@
+template:
+  code: nest-repo
+  name: Nest App Repo
+  description: Nest application with a Nest backend
+  version: 1.0.0
+
+config:
+  type: npm-nestjs
+  bundler: webpack@5
+  dependencies:
+    - node@16.0.0
+    - npm@8.3.0
+
+modules:
+ nestapi:
+    source: https://github.com/arditbegaj/nestapi.git
+    version: 1.0.0
+    config:
+      modules:
+        identity:
+          type: aws-cognito
+          features: "?"
+      packager:
+        dependencies:
+          - lodash@4
