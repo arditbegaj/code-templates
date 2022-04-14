@@ -1,5 +1,5 @@
 template:
-  code: react-ts-app
+  code: react-typescript
   name: React Typescript App 
   description: React application with Typescript
   version: 1.0.0
