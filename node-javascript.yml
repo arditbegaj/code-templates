@@ -1,0 +1,25 @@
+template:
+  code: node-repo
+  name: NodeJs App Repo
+  description: Node application
+  version: 1.0.0
+
+config:
+  type: npm-nodejs
+  bundler: webpack@5
+  dependencies:
+    - node@16.0.0
+    - npm@8.3.0
+
+modules:
+ nodeapi:
+    source: https://github.com/HoagsObjectD/mode.git
+    version: 1.0.0
+    config:
+      modules:
+        identity:
+          type: aws-cognito
+          features: "?"
+      packager:
+        dependencies:
+          - lodash@4
