@@ -1,0 +1,45 @@
+template:
+  code: react-nest-monorepo
+  name: React Nest App Monorepo
+  description: React application with a Nest backend, configured as a monorepo
+  version: 1.0.0
+
+config:
+  type: npm-monorepo
+  bundler: webpack@5
+  dependencies:
+    - node@16
+    - npm@8.3
+    
+modules:
+  shared-code:
+    source: https://github.com/arditbegaj/sharedcode.git
+    version: 1.0.0
+
+  react-ui:
+    source: https://github.com/arditbegaj/reactui.git
+    version: 1.0.0
+    config:
+      modules:
+        identity:
+          type: aws-cognito
+          features:
+            - user-browser
+            - role-browser
+            - user-editor
+            - role-editor
+      packager:
+        dependencies:
+          - animate.css@4
+
+  nest-api:
+    source: https://github.com/arditbegaj/nestapi.git
+    version: 1.0.0
+    config:
+      modules:
+        identity:
+          type: aws-cognito
+          features: "?"
+      packager:
+        dependencies:
+          - lodash@4
