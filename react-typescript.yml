@@ -1,0 +1,24 @@
+template:
+  code: react-ts-app
+  name: React Typescript App 
+  description: React application with Typescript
+  version: 1.0.0
+
+config:
+  type: web-ui
+  language: typescript
+  framework: react
+  bundler: webpack@5
+
+modules:
+  react:
+    source: https://github.com/arditbegaj/reactui.git
+    version: 1.0.0
+    config:
+      modules:
+        identity:
+          type: aws-cognito
+          features: "?"
+      packager: 
+        dependencies:
+          - animate.css@4
