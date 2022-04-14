@@ -1,5 +1,5 @@
 template:
-  code: nest-repo
+  code: nest-typescript
   name: Nest App Repo
   description: Nest application with a Nest backend
   version: 1.0.0
