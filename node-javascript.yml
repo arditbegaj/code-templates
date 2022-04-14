@@ -1,5 +1,5 @@
 template:
-  code: node-repo
+  code: node-javascript
   name: NodeJs App Repo
   description: Node application
   version: 1.0.0
